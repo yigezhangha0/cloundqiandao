@@ -7,7 +7,7 @@ import requests
 import rsa
 
 
-class CheckIn(object): 
+class CheckIn(object):
     client = requests.Session()
     login_url = "https://cloud.189.cn/api/portal/loginUrl.action?" \
                 "redirectURL=https://cloud.189.cn/web/redirect.html?returnURL=/main.action"
