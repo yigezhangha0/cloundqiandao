@@ -72,6 +72,7 @@ class CheckIn(object):
 
     def login(self):
         r = self.client.get(self.login_url)
+        print ("login-result: "+ r.text)
         captcha_token = re.findall(r"captchaToken' value='(.+?)'", r.text)[0]
         lt = re.findall(r'lt = "(.+?)"', r.text)[0]
         return_url = re.findall(r"returnUrl = '(.+?)'", r.text)[0]
